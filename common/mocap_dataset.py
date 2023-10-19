@@ -14,9 +14,10 @@ from common.utils import estimate_focal_length
 
 
 class MocapDataset(Dataset):
-    def __init__(self, img_bgr_list, detection_list):
+    def __init__(self, img_bgr_list, detection_list, img_name_list):
         self.img_bgr_list = img_bgr_list
         self.detection_list = detection_list
+        self.img_name_list = img_name_list
 
     def __len__(self):
         return len(self.detection_list)
@@ -45,4 +46,6 @@ class MocapDataset(Dataset):
         item["img_h"] = img_h
         item["img_w"] = img_w
         item["focal_length"] = focal_length
-        return item
+        item["img_idx"] = img_idx
+        item["img_name"]  = self.img_name_list[img_idx]
+        return item 
