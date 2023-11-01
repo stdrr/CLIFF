@@ -4,3 +4,5 @@ If you have just installed the packages:
 
 - in torchgeometry/core/conversions.py > rotation_matrix_to_quaternion() change the mask inversion from
 (1 - MASK) to (~MASK)
+
+WITH DETECTION: 429.7914388526365

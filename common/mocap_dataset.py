@@ -38,7 +38,7 @@ class MocapDataset(Dataset):
         bbox = self.detection_list[idx][1:5]
         norm_img, center, scale, crop_ul, crop_br, _ = process_image(img_rgb, bbox)
 
-        item["norm_img"] = norm_img
+        item["img"] = norm_img
         item["center"] = center
         item["scale"] = scale
         item["crop_ul"] = crop_ul
@@ -47,5 +47,5 @@ class MocapDataset(Dataset):
         item["img_w"] = img_w
         item["focal_length"] = focal_length
         item["img_idx"] = img_idx
-        item["img_name"]  = self.img_name_list[img_idx]
+        item["imgname"]  = self.img_name_list[img_idx]
         return item 

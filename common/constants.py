@@ -21,3 +21,6 @@ CROP_ASPECT_RATIO = CROP_IMG_HEIGHT / float(CROP_IMG_WIDTH)
 # Mean and standard deviation for normalizing input image
 IMG_NORM_MEAN = [0.485, 0.456, 0.406]
 IMG_NORM_STD = [0.229, 0.224, 0.225]
+IMG_RES = 256
+IMG_H = 720
+IMG_W = 1280
